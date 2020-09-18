@@ -6,7 +6,7 @@ name: Builder
 on:
   push:
     branches:
-      - master
+      - test
     paths-ignore:
       - '**/package.json'
       - '**/package-lock.json'
@@ -41,4 +41,4 @@ jobs:
         git config --global user.email "version.bump@github.action.com"
         git config --global user.name "GitHub Action Version Bumping"
         npm run bump-patch-version
-        git push --follow-tags
+        git push
